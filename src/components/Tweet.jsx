@@ -1,20 +1,20 @@
-function Tweet() {
+import ProfileImage from "./ProfileImage";
+import Timestamp from "./Timestamp";
+import Message from "./Message";
+import User from "./User";
+function Tweet(props) {
   return (
     <div className="tweet">
-      <img
-        src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/ih_logo.jpeg"
-        className="profile"
-        alt="profile"
-      />
+      <ProfileImage user={props.user} />
 
       <div className="body">
         <div className="top">
           <span className="user">
-            <span className="name">Ironhack</span>
-            <span className="handle">@ironhack</span>
+            <User />
+            <Message />
           </span>
 
-          <span className="timestamp">Nov 30, 2020</span>
+          <Timestamp />
         </div>
 
         <p className="message">
